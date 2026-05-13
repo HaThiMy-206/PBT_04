@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #f4f4f4;
+}
+
+/* ====================== */
+/* Navbar */
+/* ====================== */
+
+.navbar {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background-color: #222;
+
+    padding: 20px 40px;
+}
+
+/* Logo */
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Menu */
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+/* Auth */
+
+.auth {
+    display: flex;
+    gap: 20px;
+}
+
+/* Links */
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Hover */
+
+.navbar a:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
+/* ====================== */
+/* Product Grid */
+/* ====================== */
+
+.products {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    padding: 40px;
+}
+
+/* Card */
+
+.card {
+    flex: 0 0 calc(25% - 20px);
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: 0.3s;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Image */
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Title */
+
+.card h3 {
+    margin-top: 15px;
+}
+
+/* Price */
+
+.card p {
+    color: red;
+    font-weight: bold;
+}
+
+/* Button */
+
+.card button {
+    margin-top: auto;
+
+    padding: 10px;
+
+    border: none;
+
+    background-color: black;
+
+    color: white;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+}
+
+/* Hover Card */
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
