@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #f4f4f4;
+}
+
+/* ===================== */
+/* MAIN GRID LAYOUT */
+/* ===================== */
+
+.container {
+    display: grid;
+
+    grid-template-columns: 200px 1fr 200px;
+
+    grid-template-areas:
+        "header header header"
+        "hero hero hero"
+        "sidebar main ads"
+        "footer footer footer";
+
+    gap: 20px;
+
+    padding: 20px;
+}
+
+/* ===================== */
+/* HEADER */
+/* ===================== */
+
+header {
+    grid-area: header;
+
+    background-color: #222;
+    color: white;
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+/* ===================== */
+/* HERO */
+/* ===================== */
+
+.hero {
+    grid-area: hero;
+
+    background-color: #0077ff;
+    color: white;
+
+    padding: 50px;
+
+    text-align: center;
+
+    font-size: 30px;
+}
+
+/* ===================== */
+/* SIDEBAR */
+/* ===================== */
+
+.sidebar {
+    grid-area: sidebar;
+
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+}
+
+.sidebar label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* ===================== */
+/* MAIN CONTENT */
+/* ===================== */
+
+.main-content {
+    grid-area: main;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 20px;
+}
+
+/* Product Card */
+
+.product {
+    background-color: white;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
+}
+
+/* Featured Product */
+
+.featured {
+    grid-column: span 2;
+
+    background-color: #fff3cd;
+}
+
+/* Images */
+
+.product img {
+    width: 100%;
+
+    border-radius: 10px;
+}
+
+/* Hover */
+
+.product:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ===================== */
+/* ADS */
+/* ===================== */
+
+.ads {
+    grid-area: ads;
+
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.ads img {
+    width: 100%;
+}
+
+/* ===================== */
+/* FOOTER */
+/* ===================== */
+
+footer {
+    grid-area: footer;
+
+    background-color: #222;
+    color: white;
+
+    padding: 30px;
+
+    text-align: center;
+}
